@@ -33,11 +33,11 @@ const Header = () => {
         </Link>
 
         <nav className={styles.navLinks}>
+          <a href="/#how-it-works" onClick={(e) => scrollToSection(e, 'how-it-works')} className={styles.navLink}>
+            Como Funciona
+          </a>
           <a href="/#features" onClick={(e) => scrollToSection(e, 'features')} className={styles.navLink}>
             Funcionalidades
-          </a>
-          <a href="/#pricing" onClick={(e) => scrollToSection(e, 'pricing')} className={styles.navLink}>
-            Investimento
           </a>
           <Link
             to="/about"
@@ -75,11 +75,11 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
           <nav className={styles.mobileNav}>
+            <a href="/#how-it-works" onClick={(e) => scrollToSection(e, 'how-it-works')} className={styles.mobileNavLink}>
+              Como Funciona
+            </a>
             <a href="/#features" onClick={(e) => scrollToSection(e, 'features')} className={styles.mobileNavLink}>
               Funcionalidades
-            </a>
-            <a href="/#pricing" onClick={(e) => scrollToSection(e, 'pricing')} className={styles.mobileNavLink}>
-              Investimento
             </a>
             <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
               Sobre

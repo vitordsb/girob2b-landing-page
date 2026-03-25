@@ -2,8 +2,8 @@
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -194,6 +194,11 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .navLinks {
     display: flex;
   }
@@ -208,6 +213,13 @@
 
   .mobileMenu {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -290,13 +302,17 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
-  padding: 2.5rem;
+  min-width: 0;
+  overflow: hidden;
+  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
-.cardPremium:hover {
-  border-color: rgba(18, 199, 104, 0.55);
-  transform: translateY(-5px);
+@media (hover: hover) and (pointer: fine) {
+  .cardPremium:hover {
+    border-color: rgba(18, 199, 104, 0.55);
+    transform: translateY(-5px);
+  }
 }
 
 /* ── Hero highlight cards ──────────────────────────── */
@@ -438,5 +454,11 @@
 
   .sectionTitlePremium {
     font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardPremium {
+    padding: 2rem;
   }
 }

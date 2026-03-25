@@ -2,6 +2,7 @@ import styles from '../styles/LandingPage.module.css';
 
 const features = [
   {
+    id: 'market-intelligence',
     title: 'Inteligência de Mercado',
     description: 'Dados em tempo real para tomadas de decisão precisas e estratégicas.',
     icon: (
@@ -11,6 +12,7 @@ const features = [
     ),
   },
   {
+    id: 'workflow-automation',
     title: 'Automação de Fluxo',
     description: 'Reduza o trabalho manual em até 80% com nossos fluxos automatizados.',
     icon: (
@@ -20,6 +22,7 @@ const features = [
     ),
   },
   {
+    id: 'enterprise-security',
     title: 'Segurança Enterprise',
     description: 'Compliance rigoroso, garantia de auditoria e conformidade total com a LGPD.',
     icon: (
@@ -30,6 +33,7 @@ const features = [
   },
 
   {
+    id: 'national-scale',
     title: 'Escalabilidade Nacional',
     description: 'Infraestrutura robusta para atender operações em todo o território brasileiro.',
     icon: (
@@ -42,26 +46,31 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-32 bg-slate-900">
+    <section id="features" className="bg-slate-900 py-20 md:py-24 xl:py-28">
       <div className={styles.container}>
-        <div className="text-center mb-20">
+        <div className="mx-auto mb-12 max-w-4xl text-center md:mb-16">
           <h2 className="text-brand-accent font-bold uppercase tracking-[0.3em] text-sm mb-4">Por que o Giro B2B?</h2>
-          <h3 className="text-4xl md:text-6xl font-black text-white mb-6">Não priorizamos leads, <br /><span className="text-brand-accent">priorizamos receita.</span></h3>
-          <p className="text-slate-200 text-lg max-w-3xl mx-auto leading-relaxed">
-            Ao investir na plataforma, você não paga apenas por acesso ou 'possibilidade' de compra.
-            Você investe em <span className="text-white font-bold">efetividade</span>.
-            Nossa tecnologia elimina o ruído e garante que suas cotações e pesquisas se convertam em fechamentos reais com muito mais frequência.
+          <h3 className="mb-5 text-3xl font-black text-white sm:text-4xl lg:text-5xl xl:text-6xl">
+            Nós transformamos leads em <br /><span className="text-brand-accent">receitas verdadeiras.</span>
+          </h3>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200 md:text-lg">
+            Com a Giro B2B, sua empresa ganha mais oportunidades de transformar leads em receita.
+            Nossa plataforma automatiza etapas de compra, cotação e orçamento entre diferentes materiais e
+            fornecedores, reduzindo atritos operacionais e criando conexões mais fortes, estratégicas e lucrativas
+            com o mercado.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className={styles.cardPremium}>
-              <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent mb-8">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
+          {features.map((feature) => (
+            <div key={feature.id} className={`${styles.cardPremium} h-full`}>
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent md:mb-7 md:h-16 md:w-16">
                 {feature.icon}
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">{feature.title}</h4>
-              <p className="text-slate-200 leading-relaxed font-medium opacity-90">{feature.description}</p>
+              <h4 className="mb-3 text-lg font-bold text-white md:mb-4 md:text-xl">{feature.title}</h4>
+              <p className="text-sm font-medium leading-relaxed text-slate-200 opacity-90 md:text-[0.95rem]">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

@@ -12,6 +12,15 @@ const Hero = () => {
             <p className="text-xl text-slate-100 mb-6 max-w-xl leading-relaxed opacity-90">
               Deixe a plataforma cuidar dos detalhes para que você possa se concentrar no que importa. Visualize seu catálogo de forma dinâmica e realize negociações ágeis e seguras. Aumente sua eficiência operacional e alcance suas metas mais rápido.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a href="/#how-it-works" className={styles.btnAccent}>
+                Ver Como Funciona
+              </a>
+              <a href="/about" className={styles.btnOutline}>
+                Conhecer a Plataforma
+              </a>
+            </div>
             
             <div className={styles.heroHighlightsGrid}>
               <div className={styles.heroHighlightCard}>
