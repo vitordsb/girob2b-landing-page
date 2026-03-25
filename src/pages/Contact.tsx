@@ -13,7 +13,7 @@ const contactReasons = [
       'Veja como transformar catálogo em oportunidade comercial e ganhar mais presença diante de compradores relevantes.',
   },
   {
-    title: 'Quero acompanhar a evolução do projeto',
+    title: 'Quero acompanhar a evolução',
     description:
       'Se sua operação vive essa dor, faz sentido conversar cedo e construir a plataforma com mais aderência ao mercado real.',
   },
