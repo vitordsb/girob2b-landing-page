@@ -1,4 +1,4 @@
-himport { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from '../styles/LandingPage.module.css';
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="text-left z-10">
             <h1 className="text-4xl md:text-5xl font-black text-slate-950 leading-[1.1] mb-8">
               Simplifique suas compras e acelere seus resultados com o Giro B2B.
-            </h1>h
+            </h1>
             <p className="text-xl text-slate-700 mb-6 max-w-xl leading-relaxed">
               Deixe a plataforma cuidar dos detalhes para que você possa se concentrar no que importa. Visualize seu catálogo de forma dinâmica e realize negociações ágeis e seguras. Aumente sua eficiência operacional e alcance suas metas mais rápido.
             </p>
