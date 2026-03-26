@@ -41,9 +41,9 @@ const Footer = () => {
           <div>
             <h5 className="mb-8 text-xs font-bold uppercase tracking-widest text-slate-900">Contato</h5>
             <ul className="space-y-4">
+              <li><a href="mailto:comercial@girob2b.com.br" className="text-slate-600 hover:text-brand-accent transition-colors">comercial@girob2b.com.br</a></li>
               <li><Link to="/contato" className="text-slate-600 hover:text-brand-accent transition-colors">Falar com o Time</Link></li>
               <li><Link to="/contato" className="text-slate-600 hover:text-brand-accent transition-colors">Seja um Parceiro</Link></li>
-              <li><a href="https://girob2b.com.br" target="_blank" rel="noreferrer" className="text-slate-600 hover:text-brand-accent transition-colors">girob2b.com.br</a></li>
             </ul>
           </div>
         </div>

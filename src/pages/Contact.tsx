@@ -38,9 +38,21 @@ function Contact() {
               entendimento de cenário e conexão com empresas que vivem esse problema de verdade.
             </p>
 
+            <div className="mt-6 flex items-center gap-3 rounded-2xl border border-emerald-100 bg-white px-6 py-4 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-shrink-0 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">E-mail</div>
+                <a href="mailto:comercial@girob2b.com.br" className="text-lg font-black text-slate-950 hover:text-brand-accent transition-colors">
+                  comercial@girob2b.com.br
+                </a>
+              </div>
+            </div>
+
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="https://girob2b.com.br" target="_blank" rel="noreferrer" className={styles.btnAccent}>
-                Acessar girob2b.com.br
+              <a href="mailto:comercial@girob2b.com.br" className={styles.btnAccent}>
+                Enviar e-mail
               </a>
               <Link to="/about" className={styles.btnOutline}>
                 Ler Sobre a Empresa
