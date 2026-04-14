@@ -1,10 +1,7 @@
-import { Link } from 'react-router-dom';
-import styles from '../styles/LandingPage.module.css';
-
 const Footer = () => {
   return (
     <footer id="contact" className="border-t border-emerald-100 bg-[#edf6ef] pt-24 pb-12">
-      <div className={styles.container}>
+      <div className="max-w-[90rem] mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-8">
@@ -16,25 +13,25 @@ const Footer = () => {
               <span className="text-xl font-black tracking-tighter text-slate-950">Giro <span className="text-brand-accent">B2B</span></span>
             </div>
             <p className="leading-relaxed text-slate-600">
-              Liderando a transformação digital no mercado B2B com tecnologia de ponta e foco em resultados.
+              Liderando a transformacao digital no mercado B2B com tecnologia de ponta e foco em resultados.
             </p>
           </div>
-          
+
           <div>
             <h5 className="mb-8 text-xs font-bold uppercase tracking-widest text-slate-900">Plataforma</h5>
             <ul className="space-y-4">
-              <li><Link to="/como-funciona" className="text-slate-600 hover:text-brand-accent transition-colors">Como Funciona</Link></li>
-              <li><Link to="/funcionalidades" className="text-slate-600 hover:text-brand-accent transition-colors">Funcionalidades</Link></li>
-              <li><Link to="/about" className="text-slate-600 hover:text-brand-accent transition-colors">Proposta da Plataforma</Link></li>
+              <li><a href="/#como-funciona" className="text-slate-600 hover:text-brand-accent transition-colors">Como Funciona</a></li>
+              <li><a href="/#funcionalidades" className="text-slate-600 hover:text-brand-accent transition-colors">Funcionalidades</a></li>
+              <li><a href="/#sobre" className="text-slate-600 hover:text-brand-accent transition-colors">Proposta da Plataforma</a></li>
             </ul>
           </div>
 
           <div>
             <h5 className="mb-8 text-xs font-bold uppercase tracking-widest text-slate-900">Empresa</h5>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-slate-600 hover:text-brand-accent transition-colors">Sobre Nós</Link></li>
-              <li><Link to="/about" className="text-slate-600 hover:text-brand-accent transition-colors">Nossa Origem</Link></li>
-              <li><Link to="/about" className="text-slate-600 hover:text-brand-accent transition-colors">Escopo do Produto</Link></li>
+              <li><a href="/#sobre" className="text-slate-600 hover:text-brand-accent transition-colors">Sobre Nos</a></li>
+              <li><a href="/#credibilidade" className="text-slate-600 hover:text-brand-accent transition-colors">Empresa Registrada</a></li>
+              <li><a href="/#faq" className="text-slate-600 hover:text-brand-accent transition-colors">Perguntas Frequentes</a></li>
             </ul>
           </div>
 
@@ -42,8 +39,8 @@ const Footer = () => {
             <h5 className="mb-8 text-xs font-bold uppercase tracking-widest text-slate-900">Contato</h5>
             <ul className="space-y-4">
               <li><a href="mailto:comercial@girob2b.com.br" className="text-slate-600 hover:text-brand-accent transition-colors">comercial@girob2b.com.br</a></li>
-              <li><Link to="/contato" className="text-slate-600 hover:text-brand-accent transition-colors">Falar com o Time</Link></li>
-              <li><Link to="/contato" className="text-slate-600 hover:text-brand-accent transition-colors">Seja um Parceiro</Link></li>
+              <li><a href="/#contato" className="text-slate-600 hover:text-brand-accent transition-colors">Falar com o Time</a></li>
+              <li><a href="/#contato" className="text-slate-600 hover:text-brand-accent transition-colors">Seja um Parceiro</a></li>
             </ul>
           </div>
         </div>
@@ -53,7 +50,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Giro B2B. Todos os direitos reservados.
           </p>
           <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-            Política de privacidade e termos em construção
+            Politica de privacidade e termos em construcao
           </p>
         </div>
       </div>
