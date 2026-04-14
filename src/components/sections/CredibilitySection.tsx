@@ -3,23 +3,23 @@ import styles from '../../styles/LandingPage.module.css';
 const credibilityItems = [
   {
     label: 'Empresa formalizada',
-    value: 'GIROB2B Plataforma de Negocios Digitais',
+    value: 'GIROB2B Plataforma de Negócios Digitais',
     sub: 'Regime Inova Simples (I.S.)',
   },
   {
     label: 'CNPJ',
     value: '65.542.877/0001-50',
-    sub: 'Ativo desde marco de 2026',
+    sub: 'Ativo desde março de 2026',
   },
   {
     label: 'Sede',
     value: 'Brasil',
-    sub: 'Operacao 100% nacional',
+    sub: 'Operação 100% nacional',
   },
   {
     label: 'Contato institucional',
     value: 'comercial@girob2b.com.br',
-    sub: 'Respondemos em ate 2 dias uteis',
+    sub: 'Respondemos em até 2 dias úteis',
   },
 ];
 
@@ -32,7 +32,7 @@ export default function CredibilitySection() {
             Empresa registrada
           </div>
           <h2 className="text-2xl font-black text-slate-950 sm:text-3xl md:text-4xl">
-            Uma startup formal, com registro publico e equipe identificada.
+            Uma startup formal, com registro público e equipe identificada.
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,4 +1,4 @@
-export type TeamRole = 'Co-founder' | 'Conselheiro Estrategico';
+export type TeamRole = 'Co-founder' | 'Conselheiro Estratégico';
 
 export interface TeamMember {
   name: string;
@@ -11,10 +11,10 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    name: 'Gustavo Striolo',
+    name: 'Gustavo Hely Ferreira da Silva',
     title: 'CEO & Co-founder',
     role: 'Co-founder',
-    bio: 'Responsavel por estrategia, produto e visao de negocios. Conduz a direcao geral da plataforma.',
+    bio: 'CEO e co-fundador da Giro B2B. Lidera produto, estratégia e visão de negócios na construção de uma camada de conexão comercial entre empresas de diferentes setores no Brasil.',
     photoUrl: '/team/gustavo.jpg',
     linkedinUrl: '[PENDENTE: URL LinkedIn do Gustavo]',
   },
@@ -27,11 +27,11 @@ export const teamMembers: TeamMember[] = [
     linkedinUrl: '[PENDENTE: URL LinkedIn do Vitor]',
   },
   {
-    name: 'Marcio [PENDENTE: sobrenome]',
-    title: 'Conselheiro Estrategico',
-    role: 'Conselheiro Estrategico',
-    bio: 'Contribui com relacionamento comercial, parcerias e visao de mercado B2B brasileiro.',
+    name: 'Márcio [PENDENTE: sobrenome]',
+    title: 'Conselheiro Estratégico',
+    role: 'Conselheiro Estratégico',
+    bio: 'Contribui com relacionamento comercial, parcerias e visão de mercado B2B brasileiro.',
     photoUrl: '/team/marcio.jpg',
-    linkedinUrl: '[PENDENTE: URL LinkedIn do Marcio]',
+    linkedinUrl: '[PENDENTE: URL LinkedIn do Márcio]',
   },
 ];

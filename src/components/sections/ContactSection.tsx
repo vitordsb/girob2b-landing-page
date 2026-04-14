@@ -4,17 +4,17 @@ const contactReasons = [
   {
     title: 'Quero comprar melhor',
     description:
-      'Entenda como a Giro B2B pode ajudar sua equipe a descobrir fornecedores, organizar pesquisas e comparar opcoes com mais contexto.',
+      'Entenda como a Giro B2B pode ajudar sua equipe a descobrir fornecedores, organizar pesquisas e comparar opções com mais contexto.',
   },
   {
     title: 'Quero vender melhor',
     description:
-      'Veja como transformar catalogo em oportunidade comercial e ganhar mais presenca diante de compradores relevantes.',
+      'Veja como transformar catálogo em oportunidade comercial e ganhar mais presença diante de compradores relevantes.',
   },
   {
     title: 'Quero acompanhar o projeto',
     description:
-      'Se sua operacao vive essa dor, faz sentido conversar cedo e construir a plataforma com mais aderencia ao mercado real.',
+      'Se sua operação vive essa dor, faz sentido conversar cedo e construir a plataforma com mais aderência ao mercado real.',
   },
 ];
 
@@ -29,8 +29,8 @@ const ContactSection = () => {
               Vamos conversar sobre como a Giro B2B pode entrar no seu fluxo comercial.
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-700 md:text-lg">
-              Como a plataforma ainda esta em construcao, a proposta agora e abrir caminho para relacionamento,
-              entendimento de cenario e conexao com empresas que vivem esse problema de verdade.
+              Como a plataforma ainda está em construção, a proposta agora é abrir caminho para relacionamento,
+              entendimento de cenário e conexão com empresas que vivem esse problema de verdade.
             </p>
 
             <div className="mt-6 flex items-center gap-3 rounded-2xl border border-emerald-100 bg-[#f4fbf6] px-6 py-4 shadow-sm">

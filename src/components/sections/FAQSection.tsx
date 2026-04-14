@@ -16,7 +16,7 @@ export default function FAQSection() {
             Duvidas mais comuns sobre a Giro B2B.
           </h2>
           <p className="mt-4 text-base text-slate-700 md:text-lg">
-            Se a sua pergunta nao estiver aqui, fale com a gente em{' '}
+            Se a sua pergunta não estiver aqui, fale com a gente em{' '}
             <a
               href="mailto:comercial@girob2b.com.br"
               className="font-bold text-brand-accent hover:text-emerald-700"

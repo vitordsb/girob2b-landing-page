@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-xl font-black tracking-tighter text-slate-950">Giro <span className="text-brand-accent">B2B</span></span>
             </div>
             <p className="leading-relaxed text-slate-600">
-              Liderando a transformacao digital no mercado B2B com tecnologia de ponta e foco em resultados.
+              Liderando a transformação digital no mercado B2B com tecnologia de ponta e foco em resultados.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
           <div>
             <h5 className="mb-8 text-xs font-bold uppercase tracking-widest text-slate-900">Empresa</h5>
             <ul className="space-y-4">
-              <li><a href="/#sobre" className="text-slate-600 hover:text-brand-accent transition-colors">Sobre Nos</a></li>
+              <li><a href="/#sobre" className="text-slate-600 hover:text-brand-accent transition-colors">Sobre Nós</a></li>
               <li><a href="/#credibilidade" className="text-slate-600 hover:text-brand-accent transition-colors">Empresa Registrada</a></li>
               <li><a href="/#faq" className="text-slate-600 hover:text-brand-accent transition-colors">Perguntas Frequentes</a></li>
             </ul>
@@ -50,7 +50,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Giro B2B. Todos os direitos reservados.
           </p>
           <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-            Politica de privacidade e termos em construcao
+            Política de privacidade e termos em construção
           </p>
         </div>
       </div>

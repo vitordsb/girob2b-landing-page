@@ -10,7 +10,7 @@ const Hero = () => {
               O marketplace B2B brasileiro que conecta fornecedores e compradores do seu setor.
             </h1>
             <p className="text-xl text-slate-700 mb-6 max-w-xl leading-relaxed">
-              Chega de depender de indicacao informal, busca generica no Google e grupos de mensagem. A Giro B2B organiza a descoberta, a pesquisa e o relacionamento entre empresas num so lugar, de forma clara e com mais contexto.
+              Chega de depender de indicação informal, busca genérica no Google e grupos de mensagem. A Giro B2B organiza a descoberta, a pesquisa e o relacionamento entre empresas num só lugar, de forma clara e com mais contexto.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -29,7 +29,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className={styles.heroHighlightTitle}>Descoberta por setor e regiao</h3>
+                <h3 className={styles.heroHighlightTitle}>Descoberta por setor e região</h3>
               </div>
 
               <div className={styles.heroHighlightCard}>
@@ -38,7 +38,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.013 8.013 0 01-5.699-2.299C6.602 17.887 6.039 18 5.6 18c-1.4 0-2.321-.92-2.58-2.148A7.98 7.98 0 014 12C4 7.582 7.582 4 12 4s8 3.582 8 8z" />
                   </svg>
                 </div>
-                <h3 className={styles.heroHighlightTitle}>Catalogo vivo para fornecedores</h3>
+                <h3 className={styles.heroHighlightTitle}>Catálogo vivo para fornecedores</h3>
               </div>
 
               <div className={styles.heroHighlightCard}>
@@ -64,7 +64,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div className={`${styles.handshakePerson} ${styles.handshakePersonRight}`}>B</div>
-                <div className={styles.handshakeCaption}>Fechando negociacao</div>
+                <div className={styles.handshakeCaption}>Fechando negociação</div>
               </div>
             </div>
             <div className="absolute -bottom-6 right-0 bg-white p-6 rounded-2xl shadow-2xl animate-bounce">
@@ -74,7 +74,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <div className="text-slate-900 font-black text-xl">B2B</div>
-                  <div className="text-slate-500 text-xs font-bold uppercase">Conexao direta</div>
+                  <div className="text-slate-500 text-xs font-bold uppercase">Conexão direta</div>
                 </div>
               </div>
             </div>
