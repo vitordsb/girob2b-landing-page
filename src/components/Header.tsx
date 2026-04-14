@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from '../styles/LandingPage.module.css';
 
 const Header = () => {
-  const { pathname } = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -21,39 +20,27 @@ const Header = () => {
         </Link>
 
         <nav className={styles.navLinks}>
-          <Link
-            to="/como-funciona"
-            className={`${styles.navLink} ${pathname === '/como-funciona' ? styles.navLinkActive : ''}`}
-          >
+          <a href="/#como-funciona" className={styles.navLink}>
             Como Funciona
-          </Link>
-          <Link
-            to="/funcionalidades"
-            className={`${styles.navLink} ${pathname === '/funcionalidades' ? styles.navLinkActive : ''}`}
-          >
+          </a>
+          <a href="/#funcionalidades" className={styles.navLink}>
             Funcionalidades
-          </Link>
-          <Link
-            to="/about"
-            className={`${styles.navLink} ${pathname === '/about' ? styles.navLinkActive : ''}`}
-          >
+          </a>
+          <a href="/#sobre" className={styles.navLink}>
             Sobre
-          </Link>
-          <Link
-            to="/contato"
-            className={`${styles.navLink} ${pathname === '/contato' ? styles.navLinkActive : ''}`}
-          >
+          </a>
+          <a href="/#contato" className={styles.navLink}>
             Contato
-          </Link>
+          </a>
         </nav>
 
         <div className={styles.navCtas}>
-          <Link to="/contato" className={styles.navCtaSecondary}>
+          <a href="/#contato" className={styles.navCtaSecondary}>
             Entre em Contato
-          </Link>
-          <Link to="/contato" className={styles.navCta}>
+          </a>
+          <a href="/#contato" className={styles.navCta}>
             Seja um Parceiro
-          </Link>
+          </a>
         </div>
 
         <button
@@ -72,26 +59,26 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
           <nav className={styles.mobileNav}>
-            <Link to="/como-funciona" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="/#como-funciona" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
               Como Funciona
-            </Link>
-            <Link to="/funcionalidades" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
+            </a>
+            <a href="/#funcionalidades" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
               Funcionalidades
-            </Link>
-            <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
+            </a>
+            <a href="/#sobre" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
               Sobre
-            </Link>
-            <Link to="/contato" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
+            </a>
+            <a href="/#contato" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>
               Contato
-            </Link>
+            </a>
           </nav>
           <div className={styles.mobileCtas}>
-            <Link to="/contato" className={styles.navCtaSecondary} onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="/#contato" className={styles.navCtaSecondary} onClick={() => setIsMobileMenuOpen(false)}>
               Entre em Contato
-            </Link>
-            <Link to="/contato" className={styles.navCta} onClick={() => setIsMobileMenuOpen(false)}>
+            </a>
+            <a href="/#contato" className={styles.navCta} onClick={() => setIsMobileMenuOpen(false)}>
               Seja um Parceiro
-            </Link>
+            </a>
           </div>
         </div>
       )}
