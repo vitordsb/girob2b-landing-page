@@ -11,6 +11,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #f7fbf8;
