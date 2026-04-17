@@ -25,6 +25,11 @@ export const faqItems: FAQItem[] = [
       'Compradores terão acesso gratuito à busca, comparação e contato com fornecedores. Fornecedores poderão se cadastrar gratuitamente e terão a opção de assinar planos com recursos adicionais, que serão detalhados no lançamento da plataforma.',
   },
   {
+    question: 'Como a GiroB2B se diferencia de outros marketplaces B2B?',
+    answer:
+      'Nosso foco é um marketplace B2B horizontal, nacional, pensado para a realidade comercial brasileira e para setores fragmentados que ainda não encontram canais digitais eficientes. Os detalhes específicos da proposta, incluindo funcionalidades, planos e modelo de operação, estão sendo construídos e serão apresentados junto do lançamento da plataforma.',
+  },
+  {
     question: 'Quais setores a GiroB2B atende?',
     answer:
       'A GiroB2B é uma plataforma horizontal, o que significa que atende empresas de diferentes setores da economia brasileira. Desde insumos industriais até materiais para escritório, embalagens, construção e outros segmentos. A cobertura de categorias vai crescendo conforme a plataforma avança.',
