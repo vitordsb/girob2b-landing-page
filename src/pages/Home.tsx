@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import ContextBand from '../components/sections/ContextBand';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
 import TeamSection from '../components/sections/TeamSection';
@@ -10,6 +11,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <ContextBand />
       <HowItWorks />
       <Features />
       <TeamSection />
