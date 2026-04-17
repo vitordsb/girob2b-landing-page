@@ -31,6 +31,11 @@ const credibilityItems = [
     value: 'Comércio B2B fragmentado',
     sub: 'Majoritariamente off-line, em canais dispersos',
   },
+  {
+    label: 'Conformidade',
+    value: 'Alinhada à LGPD',
+    sub: 'Dados cadastrais tratados conforme a Lei Geral de Proteção de Dados',
+  },
 ];
 
 export default function CredibilitySection() {
