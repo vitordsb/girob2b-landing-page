@@ -1,4 +1,4 @@
-export type TeamRole = 'Co-founder' | 'Conselheiro Estratégico';
+export type TeamRole = 'Co-founder' | 'Head of BD';
 
 export interface TeamMember {
   name: string;
@@ -27,11 +27,11 @@ export const teamMembers: TeamMember[] = [
     linkedinUrl: 'https://www.linkedin.com/in/vitordsb/',
   },
   {
-    name: 'Márcio [PENDENTE: sobrenome]',
-    title: 'Conselheiro Estratégico',
-    role: 'Conselheiro Estratégico',
-    bio: 'Contribui com relacionamento comercial, parcerias e visão de mercado B2B brasileiro.',
+    name: 'Márcio Ramos',
+    title: 'Head of BD',
+    role: 'Head of BD',
+    bio: 'Mais de 30 anos conectando empresas no mercado B2B brasileiro. Na Giro, lidera relacionamento comercial, parcerias e aquisição de compradores.',
     photoUrl: '/team/marcio.jpg',
-    linkedinUrl: '[PENDENTE: URL LinkedIn do Márcio]',
+    linkedinUrl: 'https://www.linkedin.com/in/marcio-ramos-933b80168/',
   },
 ];
