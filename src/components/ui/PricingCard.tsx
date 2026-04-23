@@ -1,4 +1,5 @@
 import { type PricingTier } from '@/data/pricingTiers';
+import { IconCheck } from '@/components/icons';
 
 type Props = {
   tier: PricingTier;
@@ -8,46 +9,189 @@ type Props = {
 
 export function PricingCard({ tier, billing, onCtaClick }: Props) {
   const isEnterprise = tier.id === 'enterprise';
+  const isPro = tier.highlighted === true;
+  const isStarter = tier.id === 'starter';
 
   const price =
     billing === 'monthly' ? tier.priceMonthly : tier.priceAnnual ? Math.round(tier.priceAnnual / 12) : null;
 
   const periodLabel = billing === 'monthly' ? '/mês' : '/mês cobrado anualmente';
 
-  const cardClass = isEnterprise
-    ? 'bg-teal-deep text-offwhite border-teal-deep'
-    : tier.highlighted
-    ? 'bg-white border-gold-burnt border-2 shadow-lg relative'
-    : 'bg-white border-graphite-soft/20';
+  // --- Enterprise dark card ---
+  if (isEnterprise) {
+    return (
+      <div
+        className="rounded-xl p-7 flex flex-col"
+        style={{
+          background: '#1A1F1F',
+          border: '1px solid rgba(192, 138, 46, 0.35)',
+        }}
+      >
+        <h3 className="font-sans font-bold text-xl text-offwhite mb-2">{tier.name}</h3>
 
+        <div className="mb-6">
+          <p className="font-display italic text-2xl text-gold-soft leading-tight">Sob consulta</p>
+          <p className="text-xs text-offwhite/40 mt-1 tracking-wide uppercase">Pricing personalizado</p>
+        </div>
+
+        <ul className="space-y-2.5 mb-7 flex-1">
+          {tier.features.map((f) => (
+            <li key={f} className="text-sm flex items-start gap-2.5 text-offwhite/80">
+              <IconCheck
+                size={16}
+                strokeWidth={2}
+                className="flex-shrink-0 mt-0.5"
+                style={{ color: '#D4A04A' } as React.CSSProperties}
+              />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          onClick={onCtaClick}
+          className="w-full py-3.5 rounded-lg font-sans font-bold text-sm transition-all hover:brightness-110 active:scale-95"
+          style={{
+            background: 'linear-gradient(135deg, #C08A2E 0%, #D4A04A 100%)',
+            color: '#1A1F1F',
+          }}
+        >
+          {tier.ctaLabel}
+        </button>
+      </div>
+    );
+  }
+
+  // --- Pro highlighted card ---
+  if (isPro) {
+    return (
+      <div
+        className="rounded-xl p-7 flex flex-col relative md:scale-105"
+        style={{
+          background: '#FFFFFF',
+          border: '2px solid #C08A2E',
+          boxShadow: '0 20px 60px -15px rgba(192, 138, 46, 0.35)',
+        }}
+      >
+        {/* Editorial "Mais popular" badge */}
+        <div
+          className="absolute -top-px left-1/2 -translate-x-1/2 px-4 py-1"
+          style={{
+            background: 'linear-gradient(135deg, #C08A2E, #D4A04A)',
+            borderRadius: '0 0 8px 8px',
+          }}
+        >
+          <span className="font-display italic text-sm text-graphite whitespace-nowrap">
+            — Mais popular —
+          </span>
+        </div>
+
+        <h3 className="font-sans font-bold text-xl text-teal-deep mb-2 mt-5">{tier.name}</h3>
+
+        <div className="mb-5">
+          <span className="font-sans font-black text-5xl text-graphite">R$ {price}</span>
+          <span className="text-sm text-graphite/50 ml-1.5">{periodLabel}</span>
+        </div>
+
+        <ul className="space-y-2.5 mb-7 flex-1">
+          {tier.features.map((f) => (
+            <li key={f} className="text-sm flex items-start gap-2.5 text-graphite">
+              <IconCheck
+                size={16}
+                strokeWidth={2}
+                className="flex-shrink-0 mt-0.5"
+                style={{ color: '#C08A2E' } as React.CSSProperties}
+              />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          onClick={onCtaClick}
+          className="w-full py-3.5 rounded-lg font-sans font-bold text-sm transition-all hover:brightness-110 active:scale-95"
+          style={{
+            background: 'linear-gradient(135deg, #C08A2E 0%, #D4A04A 100%)',
+            color: '#1A1F1F',
+            boxShadow: '0 4px 20px rgba(192, 138, 46, 0.3)',
+          }}
+        >
+          {tier.ctaLabel}
+        </button>
+      </div>
+    );
+  }
+
+  // --- Starter minimal card ---
+  if (isStarter) {
+    return (
+      <div
+        className="rounded-xl p-7 flex flex-col shadow-sm"
+        style={{
+          background: '#FFFFFF',
+          border: '1px solid rgba(26, 31, 31, 0.10)',
+        }}
+      >
+        <h3 className="font-sans font-bold text-xl text-teal-deep mb-2">{tier.name}</h3>
+
+        <div className="mb-5">
+          <span className="font-sans font-black text-4xl text-graphite">R$ {price}</span>
+          <span className="text-sm text-graphite/50 ml-1.5">{periodLabel}</span>
+        </div>
+
+        <ul className="space-y-2.5 mb-7 flex-1">
+          {tier.features.map((f) => (
+            <li key={f} className="text-sm flex items-start gap-2.5 text-graphite">
+              <IconCheck
+                size={16}
+                strokeWidth={2}
+                className="flex-shrink-0 mt-0.5"
+                style={{ color: '#0A5C5C' } as React.CSSProperties}
+              />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          onClick={onCtaClick}
+          className="w-full py-3.5 rounded-lg font-sans font-medium text-sm transition-all hover:bg-teal-mid active:scale-95"
+          style={{
+            background: '#0A5C5C',
+            color: '#F4F1EA',
+          }}
+        >
+          {tier.ctaLabel}
+        </button>
+      </div>
+    );
+  }
+
+  // --- Premium card (default) ---
   return (
-    <div className={`rounded-lg p-6 border ${cardClass} flex flex-col`}>
-      {tier.highlighted && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-burnt text-white text-xs font-bold px-3 py-1 rounded-full">
-          Mais popular
-        </div>
-      )}
+    <div
+      className="rounded-xl p-7 flex flex-col shadow-md"
+      style={{
+        background: '#FFFFFF',
+        border: '1px solid rgba(26, 31, 31, 0.10)',
+      }}
+    >
+      <h3 className="font-sans font-bold text-xl text-teal-deep mb-2">{tier.name}</h3>
 
-      <h3 className={`text-xl font-bold mb-2 ${isEnterprise ? 'text-offwhite' : 'text-teal-deep'}`}>
-        {tier.name}
-      </h3>
+      <div className="mb-5">
+        <span className="font-sans font-black text-4xl text-graphite">R$ {price}</span>
+        <span className="text-sm text-graphite/50 ml-1.5">{periodLabel}</span>
+      </div>
 
-      {isEnterprise ? (
-        <div className="mb-4">
-          <p className="text-lg font-medium">Precisa de mais?</p>
-          <p className="text-sm text-offwhite/80 mt-1">Pricing sob consulta</p>
-        </div>
-      ) : (
-        <div className="mb-4">
-          <span className="text-3xl font-bold text-graphite">R$ {price}</span>
-          <span className="text-sm text-graphite-soft ml-1">{periodLabel}</span>
-        </div>
-      )}
-
-      <ul className={`space-y-2 mb-6 flex-1 ${isEnterprise ? 'text-offwhite/90' : 'text-graphite'}`}>
+      <ul className="space-y-2.5 mb-7 flex-1">
         {tier.features.map((f) => (
-          <li key={f} className="text-sm flex items-start gap-2">
-            <span className={isEnterprise ? 'text-gold-soft' : 'text-gold-burnt'}>✓</span>
+          <li key={f} className="text-sm flex items-start gap-2.5 text-graphite">
+            <IconCheck
+              size={16}
+              strokeWidth={2}
+              className="flex-shrink-0 mt-0.5"
+              style={{ color: '#0A5C5C' } as React.CSSProperties}
+            />
             <span>{f}</span>
           </li>
         ))}
@@ -55,11 +199,11 @@ export function PricingCard({ tier, billing, onCtaClick }: Props) {
 
       <button
         onClick={onCtaClick}
-        className={`w-full py-3 rounded font-medium transition ${
-          tier.highlighted || isEnterprise
-            ? 'bg-gold-burnt text-white hover:bg-gold-soft'
-            : 'bg-teal-deep text-white hover:bg-teal-mid'
-        }`}
+        className="w-full py-3.5 rounded-lg font-sans font-medium text-sm transition-all hover:bg-teal-mid active:scale-95"
+        style={{
+          background: '#0A5C5C',
+          color: '#F4F1EA',
+        }}
       >
         {tier.ctaLabel}
       </button>

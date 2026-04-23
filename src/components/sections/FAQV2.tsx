@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FAQ_ITEMS } from '@/data/faqItems';
+import { IconChevronDown } from '@/components/icons';
 import { trackEvent } from '@/lib/analytics';
 
 export function FAQV2() {
@@ -12,28 +13,54 @@ export function FAQV2() {
   }
 
   return (
-    <section id="faq" className="py-16 md:py-20 bg-white">
-      <div className="max-w-container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-deep text-center mb-12">
-          Perguntas frequentes
-        </h2>
+    <section id="faq" className="py-16 md:py-24 bg-white">
+      <div className="max-w-container mx-auto px-6">
+        <div className="max-w-3xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <p className="font-display italic text-gold-burnt text-base mb-3">Dúvidas comuns</p>
+            <h2 className="font-sans font-black text-3xl md:text-4xl text-graphite">
+              Perguntas frequentes
+            </h2>
+          </div>
 
-        <div className="space-y-3">
-          {FAQ_ITEMS.map((item, idx) => (
-            <div key={item.question} className="border border-graphite-soft/20 rounded">
-              <button
-                onClick={() => toggle(idx)}
-                aria-expanded={open === idx}
-                className="w-full text-left px-5 py-4 flex justify-between items-center hover:bg-offwhite transition"
-              >
-                <span className="font-medium text-graphite pr-4">{item.question}</span>
-                <span className="text-gold-burnt text-xl flex-shrink-0">{open === idx ? '−' : '+'}</span>
-              </button>
-              {open === idx && (
-                <div className="px-5 pb-4 text-sm text-graphite leading-relaxed">{item.answer}</div>
-              )}
-            </div>
-          ))}
+          {/* Accordion */}
+          <div className="divide-y" style={{ borderColor: 'rgba(26,31,31,0.08)' }}>
+            {FAQ_ITEMS.map((item, idx) => {
+              const isOpen = open === idx;
+              return (
+                <div key={item.question}>
+                  <button
+                    onClick={() => toggle(idx)}
+                    aria-expanded={isOpen}
+                    className="w-full text-left px-0 py-5 flex justify-between items-center gap-4 group transition"
+                  >
+                    <span className="font-sans font-medium text-graphite group-hover:text-teal-deep transition-colors">
+                      {item.question}
+                    </span>
+                    <IconChevronDown
+                      size={20}
+                      strokeWidth={1.5}
+                      className="flex-shrink-0 transition-transform duration-300 text-gold-burnt"
+                      style={{
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                      } as React.CSSProperties}
+                    />
+                  </button>
+
+                  {/* Answer — height transition via max-height trick */}
+                  <div
+                    className="overflow-hidden transition-all duration-300"
+                    style={{ maxHeight: isOpen ? '400px' : '0px' }}
+                  >
+                    <p className="pb-5 text-sm text-graphite/70 leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -25,37 +25,82 @@ export function PricingSection() {
   }
 
   return (
-    <section id="pricing" className="py-16 md:py-20 bg-offwhite">
-      <div className="max-w-container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-deep text-center mb-4">
-          Planos para fornecedores
-        </h2>
-        <p className="text-lg text-graphite text-center mb-8">
-          O comprador navega grátis. O fornecedor paga mensalidade transparente.
-        </p>
+    <section
+      id="pricing"
+      className="py-16 md:py-24 relative overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(ellipse at 50% 50%, rgba(192,138,46,0.05), transparent 60%),
+          #F4F1EA
+        `,
+      }}
+    >
+      {/* Decorative shape — gold diamond outline, top-right */}
+      <svg
+        aria-hidden="true"
+        className="absolute top-8 right-8 opacity-[0.06] pointer-events-none"
+        width="180"
+        height="180"
+        viewBox="0 0 180 180"
+        fill="none"
+      >
+        <rect x="45" y="45" width="90" height="90" stroke="#C08A2E" strokeWidth="1" transform="rotate(45 90 90)" />
+        <rect x="30" y="30" width="120" height="120" stroke="#C08A2E" strokeWidth="0.5" transform="rotate(45 90 90)" />
+      </svg>
 
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex bg-white rounded-full border border-graphite-soft/30 p-1">
+      <div className="max-w-container mx-auto px-6">
+        {/* Heading block */}
+        <div className="text-center mb-12">
+          <p className="font-display italic text-gold-burnt text-base mb-3">Investimento transparente</p>
+          <h2 className="font-sans font-black text-3xl md:text-4xl text-graphite mb-4">
+            Planos para fornecedores
+          </h2>
+          <p className="text-graphite/60 text-lg">
+            O comprador navega grátis. O fornecedor paga mensalidade transparente.
+          </p>
+        </div>
+
+        {/* Billing toggle */}
+        <div className="flex justify-center mb-14">
+          <div
+            className="inline-flex p-1 gap-0.5"
+            style={{
+              background: 'rgba(26,31,31,0.06)',
+              borderRadius: '100px',
+              border: '1px solid rgba(26,31,31,0.08)',
+            }}
+          >
             <button
               onClick={() => toggleBilling('monthly')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition ${
-                billing === 'monthly' ? 'bg-teal-deep text-white' : 'text-graphite'
-              }`}
+              className="px-6 py-2 text-xs font-sans font-bold uppercase tracking-wider transition-all duration-200 rounded-full"
+              style={{
+                background: billing === 'monthly' ? '#0A5C5C' : 'transparent',
+                color: billing === 'monthly' ? '#F4F1EA' : 'rgba(26,31,31,0.5)',
+              }}
             >
               Mensal
             </button>
             <button
               onClick={() => toggleBilling('annual')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition ${
-                billing === 'annual' ? 'bg-teal-deep text-white' : 'text-graphite'
-              }`}
+              className="px-6 py-2 text-xs font-sans font-bold uppercase tracking-wider transition-all duration-200 rounded-full flex items-center gap-2"
+              style={{
+                background: billing === 'annual' ? '#0A5C5C' : 'transparent',
+                color: billing === 'annual' ? '#F4F1EA' : 'rgba(26,31,31,0.5)',
+              }}
             >
-              Anual <span className="text-gold-burnt">(economize 15%)</span>
+              Anual
+              <span
+                className="text-xs font-normal normal-case"
+                style={{ color: billing === 'annual' ? '#D4A04A' : '#C08A2E' }}
+              >
+                −15%
+              </span>
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 pt-4">
+        {/* Cards grid — extra vertical padding so scale-105 Pro card has room */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-4 py-6">
           {PRICING_TIERS.map((tier) => (
             <PricingCard key={tier.id} tier={tier} billing={billing} onCtaClick={() => handleCta(tier.id)} />
           ))}

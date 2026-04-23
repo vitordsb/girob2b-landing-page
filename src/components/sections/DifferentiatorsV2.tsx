@@ -1,32 +1,94 @@
 import { DIFFERENTIATORS } from '@/data/differentiators';
+import { IconCheck } from '@/components/icons';
 
 export function DifferentiatorsV2() {
   return (
-    <section className="py-16 md:py-20 bg-white">
-      <div className="max-w-container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-deep text-center mb-3">
-          Por que a GiroB2B funciona diferente
-        </h2>
-        <p className="text-sm text-graphite-soft text-center mb-12 max-w-3xl mx-auto">
-          Modelo inspirado em marketplaces consolidados como IndiaMART (R$ 950M/ano, 8,4M fornecedores na Índia), adaptado ao mercado brasileiro.
-        </p>
+    <section
+      className="py-16 md:py-24 relative overflow-hidden"
+      style={{ background: '#0A5C5C' }}
+    >
+      {/* Decorative blobs */}
+      <div
+        aria-hidden="true"
+        className="absolute -top-24 -right-24 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: 'rgba(192,138,46,0.08)', filter: 'blur(70px)' }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 -left-16 w-56 h-56 rounded-full pointer-events-none"
+        style={{ background: 'rgba(42,122,122,0.3)', filter: 'blur(60px)' }}
+      />
 
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="max-w-container mx-auto px-6 relative">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <p className="font-display italic text-gold-soft text-base mb-3">O que muda com a GiroB2B</p>
+          <h2 className="font-sans font-black text-3xl md:text-4xl text-offwhite mb-4 max-w-2xl mx-auto">
+            Por que a GiroB2B funciona diferente
+          </h2>
+          {/* IndiaMART citation */}
+          <p className="font-display italic text-offwhite/50 text-base max-w-xl mx-auto">
+            "Modelo inspirado em marketplaces consolidados como IndiaMART — R$ 950M/ano, 8,4M fornecedores — adaptado ao mercado brasileiro."
+          </p>
+        </div>
+
+        {/* Grid of differentiator cards */}
+        <div className="grid md:grid-cols-2 gap-5">
           {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} className="border border-graphite-soft/20 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-teal-deep mb-4">{d.title}</h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-xs font-bold text-graphite-soft uppercase tracking-wider mb-1">
+            <div
+              key={d.title}
+              className="rounded-xl overflow-hidden"
+              style={{
+                border: '1px solid rgba(192,138,46,0.20)',
+                background: 'rgba(10,92,92,0.5)',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              {/* Card header */}
+              <div
+                className="px-6 py-4"
+                style={{ borderBottom: '1px solid rgba(192,138,46,0.15)' }}
+              >
+                <h3 className="font-sans font-bold text-lg text-offwhite">{d.title}</h3>
+              </div>
+
+              {/* Two-column content */}
+              <div className="grid grid-cols-[1fr_1px_1fr] items-stretch">
+                {/* Left — today (muted) */}
+                <div className="px-6 py-5">
+                  <p
+                    className="text-xs font-sans font-bold uppercase tracking-widest mb-3"
+                    style={{ color: 'rgba(244,241,234,0.35)' }}
+                  >
                     Mercado hoje
                   </p>
-                  <p className="text-sm text-graphite">{d.marketToday}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(244,241,234,0.50)' }}>
+                    {d.marketToday}
+                  </p>
                 </div>
-                <div className="border-l-4 border-gold-burnt pl-3">
-                  <p className="text-xs font-bold text-gold-burnt uppercase tracking-wider mb-1">
+
+                {/* Vertical hairline separator */}
+                <div style={{ background: 'rgba(192,138,46,0.25)' }} />
+
+                {/* Right — with GiroB2B (vivid) */}
+                <div className="px-6 py-5">
+                  <p
+                    className="text-xs font-sans font-bold uppercase tracking-widest mb-3"
+                    style={{ color: '#D4A04A' }}
+                  >
                     Com GiroB2B
                   </p>
-                  <p className="text-sm text-graphite">{d.withGiroB2B}</p>
+                  <div className="flex items-start gap-2.5">
+                    <IconCheck
+                      size={15}
+                      strokeWidth={2}
+                      className="flex-shrink-0 mt-0.5"
+                      style={{ color: '#D4A04A' } as React.CSSProperties}
+                    />
+                    <p className="text-sm leading-relaxed text-offwhite">
+                      {d.withGiroB2B}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
