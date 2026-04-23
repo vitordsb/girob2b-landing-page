@@ -1,5 +1,5 @@
 import { DIFFERENTIATORS } from '@/data/differentiators';
-import { IconCheck } from '@/components/icons';
+import { IconCheck, IconX } from '@/components/icons';
 
 export function DifferentiatorsV2() {
   return (
@@ -54,23 +54,31 @@ export function DifferentiatorsV2() {
 
               {/* Two-column content */}
               <div className="grid grid-cols-[1fr_1px_1fr] items-stretch">
-                {/* Left — today (muted) */}
+                {/* Left — today (problem) */}
                 <div className="px-6 py-5">
                   <p
                     className="text-xs font-sans font-bold uppercase tracking-widest mb-3"
-                    style={{ color: 'rgba(244,241,234,0.35)' }}
+                    style={{ color: '#C08A2E' }}
                   >
                     Mercado hoje
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(244,241,234,0.50)' }}>
-                    {d.marketToday}
-                  </p>
+                  <div className="flex items-start gap-2.5">
+                    <IconX
+                      size={15}
+                      strokeWidth={2}
+                      className="flex-shrink-0 mt-0.5"
+                      style={{ color: 'rgba(192,138,46,0.6)' } as React.CSSProperties}
+                    />
+                    <p className="text-sm leading-relaxed text-offwhite">
+                      {d.marketToday}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Vertical hairline separator */}
                 <div style={{ background: 'rgba(192,138,46,0.25)' }} />
 
-                {/* Right — with GiroB2B (vivid) */}
+                {/* Right — with GiroB2B (solution) */}
                 <div className="px-6 py-5">
                   <p
                     className="text-xs font-sans font-bold uppercase tracking-widest mb-3"

@@ -208,10 +208,10 @@ export function HeroV2() {
               Encontre fornecedores B2B qualificados sem perder semanas ligando
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline — narrower for editorial breathing room (Gemini pairing feedback) */}
             <p
-              className="font-sans font-normal text-lg md:text-xl leading-relaxed max-w-xl"
-              style={{ color: 'rgba(244, 241, 234, 0.82)' }}
+              className="font-sans font-normal text-lg md:text-xl leading-relaxed max-w-[30rem]"
+              style={{ color: 'rgba(244, 241, 234, 0.82)', lineHeight: '1.65' }}
             >
               A GiroB2B conecta compradores e fornecedores com busca técnica real: cada produto cadastrado tem atributos estruturados (material, dimensão, certificação) e quota mensal de leads garantida por plano.
             </p>
