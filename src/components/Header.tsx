@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from '../styles/LandingPage.module.css';
 
 const Header = () => {
@@ -8,16 +7,16 @@ const Header = () => {
   return (
     <header className={styles.navbar}>
       <div className={`${styles.container} ${styles.navbarInner}`}>
-        <Link to="/" className={styles.navBrand} onClick={() => setIsMobileMenuOpen(false)}>
+        <a href="/" className={styles.navBrand} onClick={() => setIsMobileMenuOpen(false)}>
           <img
-            src="/giro-b2b-logo.svg"
+            src="/logo-v3-g-isolated.png"
             alt="GiroB2B"
-            className="w-9 h-9 rounded bg-white object-contain p-0.5 shadow-sm shrink-0"
+            className="w-9 h-9 object-contain shrink-0"
           />
           <div className="text-lg font-black tracking-tight text-slate-900 leading-none">
             Giro<span className="text-brand-accent">B2B</span>
           </div>
-        </Link>
+        </a>
 
         <nav className={styles.navLinks}>
           <a href="/#como-funciona" className={styles.navLink}>

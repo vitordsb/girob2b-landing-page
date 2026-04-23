@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Header from '@/components/Header';
 import { HeroV2 } from '@/components/sections/HeroV2';
 import { PainPoints } from '@/components/sections/PainPoints';
 import { HowItWorksV2 } from '@/components/sections/HowItWorksV2';
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <HeroV2 />
       <PainPoints />
       <HowItWorksV2 />

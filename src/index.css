@@ -22,6 +22,30 @@
   font-display: swap;
 }
 
+@theme {
+  /* Paleta GiroB2B v3 — editorial B2B brasileiro refinado */
+  --color-teal-deep: #0A5C5C;
+  --color-teal-mid: #166666;
+  --color-teal-light: #2A7A7A;
+  --color-gold-burnt: #C08A2E;
+  --color-gold-soft: #D4A04A;
+  --color-offwhite: #F4F1EA;
+  --color-graphite: #1A1F1F;
+  --color-graphite-soft: #3A4040;
+
+  /* Alias pra componentes legados que usam brand-accent */
+  --color-brand-accent: #C08A2E;
+
+  /* Tipografia — DM Sans (body/UI) + Instrument Serif (display/italic) */
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+}
+
+/* Utility global: max-width do container principal (1200px) */
+.max-w-container {
+  max-width: 1200px;
+}
+
 body {
   font-family: var(--font-family-sans);
   color: var(--color-graphite);
