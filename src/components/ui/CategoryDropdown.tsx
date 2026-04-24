@@ -18,7 +18,7 @@ export function CategoryDropdown({ value, onChange, required, id = 'category' }:
         value={value}
         onChange={(e) => onChange(e.target.value as Category)}
         required={required}
-        className="w-full px-3 py-2 border border-graphite-soft rounded bg-white focus:outline-none focus:ring-2 focus:ring-teal-deep"
+        className={`w-full px-3 py-2 border border-graphite-soft rounded bg-white focus:outline-none focus:ring-2 focus:ring-teal-deep ${value ? 'text-graphite' : 'text-graphite-soft'}`}
       >
         <option value="">Selecione uma categoria</option>
         {CATEGORIES_TOP_20.map((cat) => (

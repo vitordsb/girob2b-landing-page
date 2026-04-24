@@ -24,3 +24,7 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# UX audit artefacts (root-level screenshots + Playwright MCP snapshots)
+/*.png
+/.playwright-mcp/

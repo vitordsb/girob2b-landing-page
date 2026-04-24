@@ -208,6 +208,13 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
   .navLinks {
     display: flex;
@@ -223,13 +230,6 @@
 
   .mobileMenu {
     display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 

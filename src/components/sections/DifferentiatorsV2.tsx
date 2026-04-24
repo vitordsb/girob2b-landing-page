@@ -12,12 +12,12 @@ export function DifferentiatorsV2() {
       <div
         aria-hidden="true"
         className="absolute -top-24 -right-24 w-72 h-72 rounded-full pointer-events-none"
-        style={{ background: 'rgba(192,138,46,0.08)', filter: 'blur(70px)' }}
+        style={{ background: 'rgba(212,160,74,0.14)', filter: 'blur(70px)' }}
       />
       <div
         aria-hidden="true"
         className="absolute bottom-0 -left-16 w-56 h-56 rounded-full pointer-events-none"
-        style={{ background: 'rgba(42,122,122,0.3)', filter: 'blur(60px)' }}
+        style={{ background: 'rgba(42,122,122,0.35)', filter: 'blur(60px)' }}
       />
 
       <div className="max-w-container mx-auto px-6 relative">
@@ -28,7 +28,7 @@ export function DifferentiatorsV2() {
             Por que a GiroB2B funciona diferente
           </h2>
           {/* IndiaMART citation */}
-          <p className="font-sans text-offwhite/65 text-sm max-w-xl mx-auto leading-relaxed">
+          <p className="font-sans text-offwhite/75 text-sm max-w-xl mx-auto leading-relaxed">
             Modelo inspirado em marketplaces consolidados como IndiaMART — R$ 950M/ano, 8,4M fornecedores — adaptado ao mercado brasileiro.
           </p>
         </div>
@@ -40,26 +40,28 @@ export function DifferentiatorsV2() {
               key={d.title}
               className="rounded-xl overflow-hidden"
               style={{
-                border: '1px solid rgba(192,138,46,0.20)',
-                background: 'rgba(10,92,92,0.5)',
+                border: '1px solid rgba(192,138,46,0.35)',
+                background: 'rgba(22,102,102,0.85)',
                 backdropFilter: 'blur(8px)',
+                boxShadow:
+                  '0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(212,160,74,0.12)',
               }}
             >
               {/* Card header */}
               <div
                 className="px-6 py-4"
-                style={{ borderBottom: '1px solid rgba(192,138,46,0.15)' }}
+                style={{ borderBottom: '1px solid rgba(192,138,46,0.28)' }}
               >
                 <h3 className="font-sans font-bold text-lg text-offwhite">{d.title}</h3>
               </div>
 
-              {/* Two-column content */}
-              <div className="grid grid-cols-[1fr_1px_1fr] items-stretch">
-                {/* Left — today (problem) */}
+              {/* Stacked on mobile+tablet, two-column from lg+ (avoids 4-col crush in 768 grid) */}
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] items-stretch">
+                {/* Left — today (problem, desaturated) */}
                 <div className="px-6 py-5">
                   <p
                     className="text-xs font-sans font-bold uppercase tracking-widest mb-3"
-                    style={{ color: '#C08A2E' }}
+                    style={{ color: 'rgba(244,241,234,0.55)' }}
                   >
                     Mercado hoje
                   </p>
@@ -68,19 +70,22 @@ export function DifferentiatorsV2() {
                       size={15}
                       strokeWidth={2}
                       className="flex-shrink-0 mt-0.5"
-                      style={{ color: 'rgba(192,138,46,0.6)' } as React.CSSProperties}
+                      style={{ color: 'rgba(244,241,234,0.45)' } as React.CSSProperties}
                     />
-                    <p className="text-sm leading-relaxed text-offwhite">
+                    <p className="text-sm leading-relaxed text-offwhite/75">
                       {d.marketToday}
                     </p>
                   </div>
                 </div>
 
-                {/* Vertical hairline separator */}
-                <div style={{ background: 'rgba(192,138,46,0.25)' }} />
+                {/* Hairline separator — horizontal on mobile/tablet, vertical on lg+ */}
+                <div className="h-px lg:h-auto" style={{ background: 'rgba(212,160,74,0.40)' }} />
 
-                {/* Right — with GiroB2B (solution) */}
-                <div className="px-6 py-5">
+                {/* Right — with GiroB2B (solution, highlighted) */}
+                <div
+                  className="px-6 py-5"
+                  style={{ background: 'rgba(212,160,74,0.06)' }}
+                >
                   <p
                     className="text-xs font-sans font-bold uppercase tracking-widest mb-3"
                     style={{ color: '#D4A04A' }}
@@ -90,7 +95,7 @@ export function DifferentiatorsV2() {
                   <div className="flex items-start gap-2.5">
                     <IconCheck
                       size={15}
-                      strokeWidth={2}
+                      strokeWidth={2.5}
                       className="flex-shrink-0 mt-0.5"
                       style={{ color: '#D4A04A' } as React.CSSProperties}
                     />

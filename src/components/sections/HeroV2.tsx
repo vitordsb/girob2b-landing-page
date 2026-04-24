@@ -125,9 +125,9 @@ function DashboardMockup() {
         </div>
       </div>
 
-      {/* Floating small accent card — offset to break grid */}
+      {/* Floating small accent card — inline on mobile (avoid overlap), absolute on md+ */}
       <div
-        className="absolute -bottom-4 -right-4 rounded-xl px-4 py-3 w-40"
+        className="mt-3 md:mt-0 md:absolute md:-bottom-4 md:-right-4 rounded-xl px-4 py-3 w-full md:w-40"
         style={{
           background: 'rgba(10, 92, 92, 0.7)',
           border: '1px solid rgba(192, 138, 46, 0.3)',
@@ -135,9 +135,11 @@ function DashboardMockup() {
           WebkitBackdropFilter: 'blur(12px)',
         }}
       >
-        <p className="text-xs font-sans text-offwhite/50 uppercase tracking-wide">Buscas hoje</p>
-        <p className="text-xl font-sans font-black text-offwhite mt-0.5">1.283</p>
-        <p className="text-xs font-sans mt-1" style={{ color: '#D4A04A' }}>+12% vs ontem</p>
+        <div className="flex items-baseline gap-2 md:block">
+          <p className="text-xs font-sans text-offwhite/50 uppercase tracking-wide">Buscas hoje</p>
+          <p className="text-xl font-sans font-black text-offwhite md:mt-0.5">1.283</p>
+          <p className="text-xs font-sans md:mt-1 ml-auto md:ml-0" style={{ color: '#D4A04A' }}>+12% vs ontem</p>
+        </div>
       </div>
     </div>
   );
@@ -186,15 +188,15 @@ export function HeroV2() {
         aria-hidden="true"
       />
 
-      {/* Main content */}
-      <div className="relative max-w-container mx-auto px-6 py-20 md:py-28 lg:py-32">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
+      {/* Main content — extra top padding on mobile to clear the 64px fixed header */}
+      <div className="relative max-w-container mx-auto px-6 pt-24 pb-14 md:py-28 lg:py-32">
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-center">
 
           {/* Left column — text */}
-          <div className="space-y-6">
+          <div className="space-y-5 md:space-y-6">
             {/* Eyebrow */}
             <p
-              className="font-sans font-bold uppercase tracking-widest text-xs"
+              className="font-sans font-bold tracking-wide text-sm"
               style={{ color: '#D4A04A' }}
             >
               Marketplace B2B brasileiro
@@ -202,10 +204,10 @@ export function HeroV2() {
 
             {/* Headline */}
             <h1
-              className="font-sans font-black text-5xl md:text-6xl lg:text-7xl text-offwhite"
-              style={{ lineHeight: '1.05' }}
+              className="font-sans font-black text-4xl md:text-6xl lg:text-7xl text-offwhite"
+              style={{ lineHeight: '1.08' }}
             >
-              Encontre fornecedores B2B qualificados sem perder semanas ligando
+              Encontre fornecedores B2B qualificados sem perder tempo.
             </h1>
 
             {/* Subheadline — narrower for editorial breathing room (Gemini pairing feedback) */}

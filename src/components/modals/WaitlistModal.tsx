@@ -70,7 +70,7 @@ export function WaitlistModal({ open, onClose, source }: Props) {
             </p>
             <button
               onClick={onClose}
-              className="px-6 py-2 bg-gold-burnt text-white rounded hover:bg-gold-soft font-medium"
+              className="px-6 py-2 bg-gold-burnt text-graphite rounded hover:bg-gold-soft font-bold"
             >
               Fechar
             </button>
@@ -95,7 +95,8 @@ export function WaitlistModal({ open, onClose, source }: Props) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-3 py-2 border border-graphite-soft rounded focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                  placeholder="seu@empresa.com.br"
+                  className="w-full px-3 py-2 border border-graphite-soft rounded text-graphite placeholder:text-graphite-soft/70 focus:outline-none focus:ring-2 focus:ring-teal-deep"
                 />
                 {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email}</p>}
               </div>
@@ -112,7 +113,7 @@ export function WaitlistModal({ open, onClose, source }: Props) {
                   placeholder="00.000.000/0000-00"
                   maxLength={18}
                   required
-                  className="w-full px-3 py-2 border border-graphite-soft rounded focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                  className="w-full px-3 py-2 border border-graphite-soft rounded text-graphite placeholder:text-graphite-soft/70 focus:outline-none focus:ring-2 focus:ring-teal-deep"
                 />
                 {errors.cnpj && <p className="text-sm text-red-600 mt-1">{errors.cnpj}</p>}
               </div>
@@ -138,14 +139,14 @@ export function WaitlistModal({ open, onClose, source }: Props) {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 px-4 py-2 border border-graphite-soft rounded hover:bg-offwhite transition"
+                  className="flex-1 px-4 py-2 border border-graphite-soft rounded text-graphite font-medium hover:bg-offwhite transition"
                 >
                   Cancelar
                 </button>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 px-4 py-2 bg-gold-burnt text-white rounded hover:bg-gold-soft font-medium disabled:opacity-50"
+                  className="flex-1 px-4 py-2 bg-gold-burnt text-graphite rounded hover:bg-gold-soft font-bold disabled:opacity-50"
                   onClick={() => trackEvent('waitlist_supplier_open', { source })}
                 >
                   {submitting ? 'Enviando...' : 'Entrar na lista'}

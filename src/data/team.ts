@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Vitor de Souza Barreto',
     title: 'CTO & Co-founder',
     role: 'Co-founder',
-    bio: 'CTO e co-fundador da GiroB2B. Engenheiro de software há mais de 5 anos, com foco em React, Next.js, TypeScript e cloud (AWS, Supabase). Lidera tecnologia, arquitetura e desenvolvimento da plataforma.',
+    bio: 'CTO e co-fundador da GiroB2B. Idealizador do SaaS. Engenheiro de software há mais de 5 anos. Lidera tecnologia, arquitetura e desenvolvimento da plataforma.',
     photoUrl: '/team/vitor.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/vitordsb/',
   },
