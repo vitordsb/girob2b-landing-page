@@ -1,4 +1,4 @@
-export type IconProps = { className?: string; size?: number; strokeWidth?: number };
+export type IconProps = { className?: string; size?: number; strokeWidth?: number; style?: React.CSSProperties };
 
 const defaults = (size = 24, strokeWidth = 1.5) => ({
   width: size,
@@ -71,18 +71,18 @@ export function IconShieldCheck({ className, size = 24, strokeWidth = 1.5 }: Ico
 }
 
 /** Check refinado — sem serrilha, com leve overshooting no final */
-export function IconCheck({ className, size = 24, strokeWidth = 1.5 }: IconProps) {
+export function IconCheck({ className, size = 24, strokeWidth = 1.5, style }: IconProps) {
   return (
-    <svg {...defaults(size, strokeWidth)} className={className} aria-hidden="true">
+    <svg {...defaults(size, strokeWidth)} className={className} style={style} aria-hidden="true">
       <path d="M4.5 12.5l5 5 9.5-10" />
     </svg>
   );
 }
 
 /** Chevron editorial — leve, inclinado */
-export function IconChevronDown({ className, size = 24, strokeWidth = 1.5 }: IconProps) {
+export function IconChevronDown({ className, size = 24, strokeWidth = 1.5, style }: IconProps) {
   return (
-    <svg {...defaults(size, strokeWidth)} className={className} aria-hidden="true">
+    <svg {...defaults(size, strokeWidth)} className={className} style={style} aria-hidden="true">
       <path d="M6 9l6 6 6-6" />
     </svg>
   );
@@ -116,9 +116,9 @@ export function IconSparkle({ className, size = 24, strokeWidth = 1.5 }: IconPro
 }
 
 /** X discreto — duas linhas cruzadas, pair visual do IconCheck */
-export function IconX({ className, size = 24, strokeWidth = 1.5 }: IconProps) {
+export function IconX({ className, size = 24, strokeWidth = 1.5, style }: IconProps) {
   return (
-    <svg {...defaults(size, strokeWidth)} className={className} aria-hidden="true">
+    <svg {...defaults(size, strokeWidth)} className={className} style={style} aria-hidden="true">
       <line x1="6" y1="6" x2="18" y2="18" />
       <line x1="18" y1="6" x2="6" y2="18" />
     </svg>
